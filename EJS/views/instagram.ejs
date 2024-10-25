@@ -1,0 +1,12 @@
+<%- include("include/index.ejs") %>
+<body>
+    <h1>this is the page of <%= data.name %></h1>
+    <button>followers <%= data.followers %></button>
+    <button>following  <%= data.following %></button>
+    <% for(let post of data.posts){ %>
+        <img src="<%= post.image %>" alt="">
+        <button><%= post.likes %> likes</button>
+        <p>comments <%= post.comments %></p>
+        <% } %>
+</body>
+</html>
